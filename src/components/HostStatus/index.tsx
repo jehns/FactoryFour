@@ -28,7 +28,7 @@ const ColWrap = styled.div<ColorProps>`
 `
 
 const HostStatus: React.FC<Props> = ({ apiName }) => {
-  let [statusData, setStatusData] = useState<StatusData | null>(null);
+  const [statusData, setStatusData] = useState<StatusData | null>(null);
 
   // initial request
   useEffect(() => {
@@ -47,7 +47,6 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
 
   const humanDate = statusData && statusData.time && new Date(statusData.time).toISOString();
   const success = statusData && statusData.success;
-
   return (
     <>
       {

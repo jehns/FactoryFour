@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 
-
+/*
+Dynamic delay for future features.
+Great article explaining how to use setInterval with hooks by Dan Abramov:
+https://overreacted.io/making-setinterval-declarative-with-react-hooks/
+*/
 const useInterval = (callback: () => void, delay: number) => {
   const savedCallback = useRef<() => void>();
 
