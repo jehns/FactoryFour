@@ -14,7 +14,7 @@ const App = () => {
       <GlobalStyle />
       <div className="App">
         <div className="App-body">
-          <h2>FactoryFour Status Page</h2>
+          <h1>FactoryFour Status Page</h1>
           <Grid>
             <Row style={{border: "1px solid #ffffff", display: "flex", justifyContent: "center", alignItems: "center", padding: "5px 0"}}>
               <Col {...COLUMNS.content}>
@@ -31,12 +31,12 @@ const App = () => {
               </Col>
             </Row>
             {
-            SITE_CONSTANTS.API_NAMES.map((apiName) => {
-              return (
-                <HostStatus key={apiName} apiName={apiName} />
-              )
-            })
-          }
+              SITE_CONSTANTS.API_NAMES.map((apiName) => {
+                return (
+                  <HostStatus key={apiName} apiName={apiName} />
+                )
+              })
+            }
           </Grid>
         </div>
       </div>

@@ -1,5 +1,4 @@
 export default {
-  // Defaults
   gridSize: 16, // columns
   gutterWidth: 1, // rem
   outerMargin: 2, // rem
