@@ -1,12 +1,12 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import HostStatus from './components/HostStatus';
-import { SITE_CONSTANTS } from './constants'
+import { SITE_CONSTANTS } from './constants';
 import theme from './style/theme';
 import GlobalStyle from './style/global';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid';
 import COLUMNS from './style/theme/COLUMNS';
-import { RowStyle } from './style/inline'
+import { RowStyle } from './style/inline';
 
 
 const App = () => {

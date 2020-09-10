@@ -8,7 +8,7 @@ import COLUMNS from '../../style/theme/COLUMNS';
 import { SITE_CONSTANTS } from '../../constants';
 import FailIcon from '../images/FailIcon';
 import SuccessIcon from '../images/SuccessIcon';
-import { RowStyle } from '../../style/inline'
+import { RowStyle } from '../../style/inline';
 
 
 interface ColorProps {
@@ -45,8 +45,8 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
     setStatusData(status);
   }, SITE_CONSTANTS.DEFAULT_INTERVAL);
 
-  const humanDate = statusData && statusData.time && new Date(statusData.time).toISOString()
-  const success = statusData && statusData.success
+  const humanDate = statusData && statusData.time && new Date(statusData.time).toISOString();
+  const success = statusData && statusData.success;
 
   return (
     <>

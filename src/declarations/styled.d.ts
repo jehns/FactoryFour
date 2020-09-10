@@ -1,4 +1,6 @@
 import 'styled-components'
+import { Flexbox } from '../types/styleTypes'
+
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -7,6 +9,6 @@ declare module 'styled-components' {
       secondary: string
     }
     media: any,
-    flexboxgrid: any
+    flexboxgrid: Flexbox
   }
 }
