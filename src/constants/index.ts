@@ -13,7 +13,7 @@ export const SITE_CONSTANTS = {
     "devices",
     "documents",
     "forms",
-    "invites",
+    // "invites",
     "media",
     "messages",
     "namespaces",
@@ -22,7 +22,7 @@ export const SITE_CONSTANTS = {
     "relationships",
     "rules",
     "templates",
-    "users",
+    // "users",
     "workflows",
   ]
 }

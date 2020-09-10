@@ -1,13 +1,11 @@
-import axios from 'axios'
+import axios from './axios'
+import { StatusData } from '../types/statusTypes'
 
-interface DataObject {
-  success: boolean,
-  message: string,
-  hostname: string,
-  time: number
-}
-
-export const getStatus = async (apiName: string): Promise<DataObject> => {
-  const status = await axios.get(`https://api.factoryfour.com/${apiName}/health/status`)
-  return status.data
+export const getStatus = async (apiName: string): Promise<StatusData> => {
+  try {
+    const status = await axios.get(`/${apiName}/health/status/`)
+    return status.data
+  } catch (error) {
+    return {success: false, message: error.message, hostname: apiName, time: Date.now()}
+  }
 }
