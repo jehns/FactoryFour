@@ -32,7 +32,6 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
 
   // initial request
   useEffect(() => {
-    console.log("fired")
     async function getInitialData() {
       const status = await getStatusData(apiName);
       setStatusData(status);
