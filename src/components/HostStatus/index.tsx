@@ -5,7 +5,10 @@ import { StatusData } from '../../types/statusTypes';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import COLUMNS from '../../style/theme/COLUMNS';
-import { SITE_CONSTANTS } from '../../constants'
+import { SITE_CONSTANTS } from '../../constants';
+import FailIcon from '../images/FailIcon';
+import SuccessIcon from '../images/SuccessIcon';
+
 
 interface ColorProps {
   readonly success: boolean | null
@@ -17,6 +20,10 @@ interface Props {
 
 const ColWrap = styled.div<ColorProps>`
   color: ${props => props.success ? props.theme.colors.primary : props.theme.colors.secondary};
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const HostStatus: React.FC<Props> = ({ apiName }) => {
@@ -44,7 +51,7 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
     <>
       {
         statusData &&
-        <Row style={{border: "1px solid #ffffff"}}>
+        <Row style={{border: "1px solid #ffffff", display: "flex", justifyContent: "center", alignItems: "center"}}>
           <Col {...COLUMNS.content}>
             <ColWrap success={success}>
               {statusData.hostname}
@@ -52,7 +59,7 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
           </Col>
           <Col {...COLUMNS.content}>
             <ColWrap success={success}>
-              {statusData.success}
+              {statusData.success ? <SuccessIcon /> : <FailIcon />}
             </ColWrap>
           </Col>
           <Col {...COLUMNS.content}>
