@@ -4,7 +4,7 @@
 // }
 
 export const SITE_CONSTANTS = {
-  DEFAULT_INTERVAL: 1500, // in milliseconds
+  DEFAULT_INTERVAL: 15000, // in milliseconds
   API_NAMES: [
     "accounts",
     "assets",

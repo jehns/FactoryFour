@@ -5,7 +5,7 @@ import { StatusData } from '../../types/statusTypes';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import styled from 'styled-components';
 import COLUMNS from '../../style/theme/COLUMNS';
-
+import { SITE_CONSTANTS } from '../../constants'
 
 interface ColorProps {
   readonly success: boolean | null
@@ -35,7 +35,7 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
   useInterval(async () => {
     const status = await getStatusData(apiName);
     setStatusData(status);
-  }, 10000);
+  }, SITE_CONSTANTS.DEFAULT_INTERVAL);
 
   const humanDate = statusData && statusData.time && new Date(statusData.time).toISOString()
   const success = statusData && statusData.success
