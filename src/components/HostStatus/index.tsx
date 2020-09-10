@@ -8,6 +8,7 @@ import COLUMNS from '../../style/theme/COLUMNS';
 import { SITE_CONSTANTS } from '../../constants';
 import FailIcon from '../images/FailIcon';
 import SuccessIcon from '../images/SuccessIcon';
+import { RowStyle } from '../../style/inline'
 
 
 interface ColorProps {
@@ -51,7 +52,7 @@ const HostStatus: React.FC<Props> = ({ apiName }) => {
     <>
       {
         statusData &&
-        <Row style={{border: "1px solid #ffffff", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <Row style={RowStyle}>
           <Col {...COLUMNS.content}>
             <ColWrap success={success}>
               {statusData.hostname}

@@ -6,6 +6,7 @@ import theme from './style/theme';
 import GlobalStyle from './style/global';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid';
 import COLUMNS from './style/theme/COLUMNS';
+import { RowStyle } from './style/inline'
 
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
         <div className="App-body">
           <h1>FactoryFour Status Page</h1>
           <Grid>
-            <Row style={{border: "1px solid #ffffff", display: "flex", justifyContent: "center", alignItems: "center", padding: "5px 0"}}>
+            <Row style={{...RowStyle, padding: "5px 0"}}>
               <Col {...COLUMNS.content}>
                 Host / Hostname
               </Col>
